@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "cart-total",
+  "version": "1.0",
+  "description": "Shows the combined total of all carts, even if you never visit the cart page.",
+  "permissions": [
+    "tabs",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "https://www.amazon.com/*",
+    "https://cart.ebay.com/*",
+    "https://cart.microcenter.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["offscreen.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "favicon_io/favicon-16x16.png",
+    "32": "favicon_io/favicon-32x32.png",
+    "48": "favicon_io/favicon-32x32.png",
+    "128": "favicon_io/android-chrome-192x192.png"
+  },
+  "privacy_policy": "https://yourdomain.com/privacy-policy"
+} 

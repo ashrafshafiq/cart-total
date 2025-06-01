@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chrome Cart Total</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+  <meta name="description" content="Shows the combined total of all carts, even if you never visit the cart page.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; min-width: 320px; background: #f8f9fa; color: #222; margin: 0; padding: 0 0 16px 0; }
+    .header { background: #343a40; color: #fff; padding: 16px 0 8px 0; text-align: center; border-radius: 0 0 12px 12px; }
+    .supported-sites { background: #fff3cd; color: #856404; border: 1px solid #ffeeba; border-radius: 8px; margin: 16px 16px 8px 16px; padding: 10px; font-size: 14px; }
+    .supported-sites strong { font-weight: bold; }
+    .cart-list-container { background: #fff; border-radius: 8px; margin: 8px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 12px; }
+    .cart-item { display: flex; justify-content: space-between; margin: 8px 0; font-size: 16px; }
+    .grand-total { font-weight: bold; margin: 16px 16px 0 16px; font-size: 18px; text-align: right; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 style="margin:0;font-size:1.6em;">Chrome Cart Total</h1>
+  </div>
+  <div class="supported-sites">
+    <strong>Supported sites:</strong> Amazon, Micro Center, eBay
+  </div>
+  <div class="cart-list-container">
+    <div id="cart-list">Loading...</div>
+  </div>
+  <div id="grand-total" class="grand-total"></div>
+  <script src="popup.js"></script>
+</body>
+</html> 
